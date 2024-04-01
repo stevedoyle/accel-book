@@ -44,10 +44,6 @@ The above chart illustrates an interesting point. Often there is an assumption t
 
 In reality, the maximum theoretical performance benefit of an accelerator is difficult to achieve. There is usually a setup cost associated with using an accelerator. This could be preparing and sending descriptors to a PCIe attached accelerator or a GPU or preparing registers when using a co-processor or specialized CPU instructions. This setup cost can be viewed as increasing the non-acceleratable (or serialized) portion of the workload which essentially slightly reduces the proportion of the workload that can be accelerated.
 
-- Explain why the upper bound performance is usually not achievable.
-- Give some examples of items that can reduce the benefit.
-- Use Amdahls law to show some curves showing the tradeoffs and impacts of overheads.
+## Estimating The Accelerated Portion of Workload
 
-## Systematic Approach
-
-- TODO: Define a systematic approach to generating a first order estimate of the seedup that an accelerator can bring to a workload.
+As illustrated above, the benefit of an accelerator depends upon the portion of the workload that can be accelerated (or parallelized using Amdahl's terminology). This portion is best determined by profiling the workload or aapplication and using the profiling data to measure the hotspots or the portion of the workload to be accelerated.
