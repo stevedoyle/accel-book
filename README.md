@@ -1,6 +1,6 @@
-# accel-book
+# WAccelerators
 
-This is a repository with source files of a book on workload accelerators by Stephen Doyle.
+This is a repository with a collection of information and resources on [workload accelerators](workload-accelerators.md).
 
 My goal is to accumulate knowledge on choosing and programming workload accelerators and to share that knowledge with the wider community. Contributions are welcome.
 
@@ -19,5 +19,5 @@ There are many ways how you can help.
 
 ## Contents
 
-- [Introduction](./chapters/1-Introduction/Introduction.md)
-- [Estimating Performance](./chapters/10-Estimating-Performance/10-0%20Estimating%20Performance.md)
+- Introduction to [workload accelerators](./workload-accelerators.md)
+- [Estimating Performance](./estimating-performance.md)
