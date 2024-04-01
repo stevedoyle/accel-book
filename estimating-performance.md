@@ -8,7 +8,7 @@ The essence of Amdahl's Law revolves around the concept that not all parts of a 
 
 Mathematically, Amdahl's Law is expressed as follows:
 
-$\text{Speedup} = \frac{1}{(1 - P) + \frac{P}{N}}$
+$$\text{Speedup} = \frac{1}{(1 - P) + \frac{P}{N}}$$
 
 Where:
 
@@ -24,15 +24,21 @@ From this formula, we can derive several important insights:
 
 Amdahl's Law is crucial for understanding the trade-offs involved in parallel computing. It underscores the importance of identifying and optimizing parallelizable portions of algorithms to achieve significant performance improvements. Additionally, it emphasizes the diminishing returns of adding more processing units once the parallelizable portion has been fully exploited.
 
-## Accelerator Performance Benefit Upper Bound
+## Upper Bound of Accelerator Performance Benefit
 
 Amdahl's Law can be used to estimate the upper bound performance benefit of a workload accelerator when applied to a portion of a workload. In this case:
 
 - $\text{Speedup}$ is the improvement in performance achieved by using an accelerator to speedup a portion of the workload.
 - $P$ is the proportion of the workload that can be accelerated.
-- $N$ is the acceleration factor which is the throughput of the accelerated portion vs using the general purpose CPU to process the accelerated portion.
+- $\frac{P}{N}$ is the accelerator improvement factor which is the throughput of the accelerated portion using the accelerator vs using a general purpose CPU to process the accelerated portion.
 
 The upper bound performance benefit of the accelerator is then the maximum limit, which is $1/(1-P)$.
+
+The benefit of an accelerator is clearly larger for larger values of $P$. The chart below plots the maximum bebefit for various values of $P$ and $\frac{P}{N}$.
+
+![Upper Bound of Accelerator Benefit](./assets/amdahl-upper-bound.png)
+
+The above chart illustrates an interesting point. Often there is an assumption that using an accelerator will give "10x" improvement, but this is only true when the portion of the workload to which the accelerator can be applied is greater than 90%.
 
 ## Accelerator Real World Performance Benefit
 
@@ -44,4 +50,4 @@ In reality, the maximum theoretical performance benefit of an accelerator is dif
 
 ## Systematic Approach
 
-- Define a systematic approach to generating a first order estimate of the seedup that an accelerator can bring to a workload.
+- TODO: Define a systematic approach to generating a first order estimate of the seedup that an accelerator can bring to a workload.
