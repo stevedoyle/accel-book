@@ -20,4 +20,5 @@ There are many ways how you can help.
 ## Contents
 
 - Introduction to [workload accelerators](./workload-accelerators.md)
+- [Ordering](ordering.md) and accelerator processing
 - [Estimating Performance](./estimating-performance.md)
