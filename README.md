@@ -1,4 +1,4 @@
-# WAccelerators
+# Workload Accelerators
 
 This is a repository with a collection of information and resources on [workload
 accelerators](./src/workload-accelerators.md).
