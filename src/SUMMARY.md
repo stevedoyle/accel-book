@@ -6,3 +6,7 @@
 - [Estimating Performance](./estimating-performance.md)
 - [Asynchronous Request Submission](./async-request-submission.md)
 - [Ordering](./ordering.md)
+- [Accelerator Software](./accel-software.md)
+  - [Accelerator Access from Linux User Space](./linux-user-space-device-access.md)
+  - [VFIO](./vfio.md)
+  - [Linux UACCE](./uacce.md)
