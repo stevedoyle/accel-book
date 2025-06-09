@@ -1,7 +1,7 @@
 # WAccelerators
 
 This is a repository with a collection of information and resources on [workload
-accelerators](workload-accelerators.md).
+accelerators](./src/workload-accelerators.md).
 
 My goal is to accumulate knowledge on choosing and programming workload
 accelerators and to share that knowledge with the wider community. Contributions
@@ -23,6 +23,14 @@ There are many ways how you can help.
 
 ## Contents
 
-- Introduction to [workload accelerators](./workload-accelerators.md)
-- [Ordering](ordering.md) and accelerator processing
+- [Introduction to Workload Accelerators](./workload-accelerators.md)
+- [AI Accelerators](./ai-accelerators.md)
+- [Cryptographic Accelerators](./crypto-accelerators.md)
+- [Data Compression Accelerators](./data-compression-accelerators.md)
 - [Estimating Performance](./estimating-performance.md)
+- [Asynchronous Request Submission](./async-request-submission.md)
+- [Ordering](./ordering.md)
+- [Accelerator Software](./accel-software.md)
+  - [Accelerator Access from Linux User Space](./linux-user-space-device-access.md)
+  - [VFIO](./vfio.md)
+  - [Linux UACCE](./uacce.md)
