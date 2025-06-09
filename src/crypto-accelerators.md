@@ -181,6 +181,42 @@ role:
   disk encryption, network stack security), kernel modules interact with the
   accelerators.
 
+```text
++------------------------------------+
+|            Applications            |
+| (Web Servers, Databases, Browsers) |
++------------------+-----------------+
+                   |
+                   | Requests for Crypto Operations
+                   V
++------------------+-----------------+
+|   High-Level Cryptographic APIs    |
+|   (OpenSSL, Microsoft CryptoAPI,   |
+|     Java Cryptography Extension)   |
++------------------+-----------------+
+                   |
+                   | Hardware Abstraction
+                   V
++------------------+-----------------+
+|      Hardware Abstraction Layer    |
+|  (e.g., Engine in OpenSSL, QATLib) |
++------------------+-----------------+
+                   |
+                   | Device-Specific Commands
+                   V
++------------------+-----------------+
+|          Device Drivers            |
+| (Kernel Modules, User-Space Drivers)|
++------------------+-----------------+
+                   |
+                   | Hardware Register Access / DMA Control
+                   V
++------------------+-----------------+
+|  Cryptographic Accelerator Hardware|
+| (CPU Extensions, PCIe Card, SoC HW)|
++------------------------------------+
+```
+
 ## Conclusion
 
 Cryptographic accelerators are essential components in the modern security
