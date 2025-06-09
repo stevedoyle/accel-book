@@ -1,0 +1,8 @@
+[book]
+authors = ["Stephen Doyle"]
+language = "en"
+src = "src"
+title = "Programming Accelerators"
+
+[output.html]
+mathjax-support = true

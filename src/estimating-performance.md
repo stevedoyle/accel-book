@@ -14,22 +14,22 @@ parallelizing a computation.
 
 Mathematically, Amdahl's Law is expressed as:
 
-$$\text{Speedup} = \frac{1}{(1 - P) + \frac{P}{N}}$$
+\\[\text{Speedup} = \frac{1}{(1 - P) + \frac{P}{N}}\\]
 
 Where:
 
-- $\text{Speedup}$ is the improvement in performance achieved by executing a
+- \\(\text{Speedup}\\) is the improvement in performance achieved by executing a
   task in parallel compared to executing it serially.
-- $P$ is the proportion of the computation that can be parallelized.
-- $N$ is the number of processing units or cores available.
+- \\(P\\) is the proportion of the computation that can be parallelized.
+- \\(N\\) is the number of processing units or cores available.
 
 From this formula, we can derive several important insights:
 
-1. As $N$ increases, the speedup approaches a maximum limit, which is $1/(1 -
-   P)$. This limit indicates the theoretical maximum speedup achievable by
-   parallelizing a computation.
+1. As \\(N\\) increases, the speedup approaches a maximum limit, which is
+   \\(1/(1 - P\\). This limit indicates the theoretical maximum speedup
+   achievable by parallelizing a computation.
 2. The effectiveness of parallelization is heavily influenced by the portion of
-   the computation that can be parallelized ($P$). If $P$ is small, the
+   the computation that can be parallelized (\\(P\\)). If \\(P\\) is small, the
    potential speedup will be limited regardless of the number of processing
    units.
 
@@ -44,19 +44,21 @@ processing units once the parallelizable portion has been fully exploited.
 Amdahl's Law can be used to estimate the upper bound performance benefit of a
 workload accelerator when applied to a portion of a workload. In this case:
 
-- $\text{Speedup}$ is the improvement in performance achieved by using an
+- \\(\text{Speedup}\\) is the improvement in performance achieved by using an
   accelerator to speedup a portion of the workload.
-- $P$ is the proportion of the workload that can be accelerated.
-- $N$ is the accelerator improvement factor which is the relative performance of
-  the accelerator vs using a general purpose CPU to process the accelerated
-  portion only. As an example, if a cryptographic accelerator can implement an
-  algorithm with a performance of 50x compared to a CPU core, then $N=50$.
+- \\(P\\) is the proportion of the workload that can be accelerated.
+- \\(N\\) is the accelerator improvement factor which is the relative
+  performance of the accelerator vs using a general purpose CPU to process the
+  accelerated portion only. As an example, if a cryptographic accelerator can
+  implement an algorithm with a performance of 50x compared to a CPU core,
+  then \\(N=50\\).
 
 The upper bound performance benefit of the accelerator is then the maximum
-limit, which is $1/(1-P)$.
+limit, which is \\(1/(1-P)\\).
 
-The benefit of an accelerator is clearly larger for larger values of $P$. The
-chart below plots the maximum bebefit for various values of $P$ and $N$.
+The benefit of an accelerator is clearly larger for larger values of \\(P\\).
+The chart below plots the maximum benefit for various values of \\(P\\) and
+\\(N\\).
 
 ![Upper Bound of Accelerator Benefit](./assets/amdahl-upper-bound.png)
 
@@ -80,5 +82,5 @@ the proportion of the workload that can be accelerated.
 As illustrated above, the benefit of an accelerator depends upon the portion of
 the workload that can be accelerated (or parallelized using Amdahl's
 terminology). This portion is best determined by profiling the workload or
-aapplication and using the profiling data to measure the hotspots or the portion
+application and using the profiling data to measure the hot-spots or the portion
 of the workload to be accelerated.
