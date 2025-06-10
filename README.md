@@ -1,9 +1,9 @@
-# Workload Accelerators
+# Programming Hardware Accelerators
 
-This is a repository with a collection of information and resources on [workload
-accelerators](./src/workload-accelerators.md).
+This is a repository with a collection of information and resources on
+programming [hardware accelerators](./src/hardware-accelerators.md).
 
-My goal is to accumulate knowledge on choosing and programming workload
+My goal is to accumulate knowledge on choosing and programming hardware
 accelerators and to share that knowledge with the wider community. Contributions
 are welcome.
 

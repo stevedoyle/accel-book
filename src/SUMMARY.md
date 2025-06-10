@@ -1,6 +1,7 @@
 # Summary
 
-- [Introduction to Workload Accelerators](./workload-accelerators.md)
+- [Introduction](./introduction.md)
+- [Introduction to Hardware Accelerators](./hardware-accelerators.md)
   - [AI Accelerators](./ai-accelerators.md)
   - [Cryptographic Accelerators](./crypto-accelerators.md)
   - [Data Compression Accelerators](./data-compression-accelerators.md)
