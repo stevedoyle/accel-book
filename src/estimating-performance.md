@@ -2,26 +2,20 @@
 
 ## Amdahls Law
 
-Amdahl's Law is a principle in computer architecture and parallel computing that
-governs the potential speedup of parallelizable tasks. It was formulated by
-computer architect Gene Amdahl in 1967.
+Amdahl's Law helps us answer a critical question in parallel computing: If we
+add more processors, how much faster will our task actually get? The law states
+that our total speedup is ultimately limited by the parts of our task that must
+run sequentially, one step at a time.
 
-The essence of Amdahl's Law revolves around the concept that not all parts of a
-program can be parallelized. Even in programs designed to run in parallel, there
-are often sequential portions that cannot be split into concurrent tasks.
-Amdahl's Law quantifies the maximum possible speedup that can be achieved by
-parallelizing a computation.
-
-Mathematically, Amdahl's Law is expressed as:
+We can calculate the potential speedup with the following formula:
 
 \\[\text{Speedup} = \frac{1}{(1 - P) + \frac{P}{N}}\\]
 
-Where:
+Let's break down the variables:
 
-- \\(\text{Speedup}\\) is the improvement in performance achieved by executing a
-  task in parallel compared to executing it serially.
-- \\(P\\) is the proportion of the computation that can be parallelized.
-- \\(N\\) is the number of processing units or cores available.
+- \\(P\\): The proportion of the task that can be split up and run in parallel.
+  For example, if 90% of your application can be parallelized, \\(P\\) is 0.9.
+- \\(N\\): The number of processing units you have to work with.
 
 From this formula, we can derive several important insights:
 
