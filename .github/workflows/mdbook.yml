@@ -39,7 +39,7 @@ jobs:
           cargo install --version ${MDBOOK_VERSION} mdbook
       - name: Install mdbook-mermaid
         run: |
-          cargo install mdbook-mermaid
+          cargo install mdbook-mermaid --version 0.14.0
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

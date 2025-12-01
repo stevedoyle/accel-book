@@ -124,12 +124,12 @@ sequenceDiagram
     App->>Device: Bind device to iommufd
     App->>IOMMUFD: Attach PASID to HWPT
 
-    Note over IOMMU: IOMMU configured with<br/>process page tables
+    Note over IOMMU: IOMMU configured with process page tables
 
     App->>App: Allocate buffer with malloc()
-    App->>Device: Submit work descriptor<br/>(with virtual address + PASID)
+    App->>Device: Submit work descriptor (with VA and PASID)
     Device->>IOMMU: DMA request (VA + PASID)
-    IOMMU->>IOMMU: Translate VA using<br/>PASID context
+    IOMMU->>IOMMU: Translate VA using PASID context
     IOMMU->>Device: Physical address
     Device->>App: Work complete
 ```
