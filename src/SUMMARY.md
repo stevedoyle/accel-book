@@ -11,6 +11,8 @@
 - [Accelerator Software](./accel-software.md)
   - [Accelerator Access from Linux User Space](./linux-user-space-device-access.md)
   - [VFIO](./vfio.md)
+  - [IOMMUFD](./iommufd.md)
+  - [PASID and Shared Virtual Addressing](./pasid-sva.md)
   - [Linux UACCE](./uacce.md)
 - [Performance](./performance.md)
   - [Estimating Performance](./estimating-performance.md)
