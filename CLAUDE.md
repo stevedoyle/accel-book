@@ -20,7 +20,12 @@ mdbook clean
 
 # Test code samples in the book
 mdbook test
+
+# Install mdbook-mermaid preprocessor (required for diagrams)
+cargo install mdbook-mermaid --version 0.14.0
 ```
+
+**Note**: mdbook-mermaid version 0.14.0 is pinned due to parsing issues in v0.17.0.
 
 ## Pre-commit Validation
 
